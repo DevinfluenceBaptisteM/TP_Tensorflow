@@ -5,3 +5,11 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
+@app.route('/upload', methods=['POST'])
+def upload():
+    try:
+        imagefile = request.files.get('avatar', '')
+        return("correctement upload")
+    except Exception as err:
+        print(err)
+        return ("Image non uploadé")    
