@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from pymongo import MongoClient
 import datetime
 import pprint
+import json
 app = Flask(__name__)
 client = MongoClient("mongodb+srv://jeanM:iWjYfAp7COoLJS2Q@cesitest-xb3jc.gcp.mongodb.net/machine_learning?retryWrites=true&w=majority")
 
@@ -36,8 +37,9 @@ def upload():
 @app.route('/results',methods=['POST','GET'])
 def result():
     collectionData = collection.find() #retourne un array de result
-    print(collectionData)
-    return ('ok')
+    for data in collectionData:
+        print(data)
+    return ("lol")
 
 
 
