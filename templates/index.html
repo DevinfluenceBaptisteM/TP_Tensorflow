@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
     <title>TP TensorFlow</title>
 </head>
 
@@ -12,14 +11,46 @@
         <div class="container">
             <h3><b>Veuillez choisir votre photo</b></h3>
             <form action="/upload" method="post" id="upload-form">
-                <input type="file" id="avatar" name="avatar"  accept="image/png, image/jpeg">
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
                 <div class="button">
                     <button type="submit">Valider</button>
                 </div>
             </form>
-            
+
         </div>
     </div>
 </body>
 
 </html>
+
+<style type="text/css">
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50rem;
+    }
+
+    .button {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+        padding: 28px 16px;
+    }
+</style>
